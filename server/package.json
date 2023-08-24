@@ -43,10 +43,8 @@
     ]
   },
   "_moduleAliases": {
-    "@loaders": "src/loaders",
-    "@routes": "src/routes",
+    "@core": "src/core",
     "@shared": "src/shared",
-    "@entities": "src/entities",
-    "@models": "src/models"
+    "@products": "src/products"
   }
 }
