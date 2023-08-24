@@ -1,16 +1,25 @@
-import express from 'express'
-import loaders from './loaders'
-import api from './routes'
+import 'reflect-metadata'
+import 'source-map-support/register'
+import 'module-alias/register'
 
-void startServer()
+import { ExpressHttpServerAdapter } from '@core/adapters/primary/express/express-server-adapter'
+import { SequelizeAdapter } from '@core/adapters/secondary/orm/sequelize/sequelize-adapter'
+import constants from '@shared/constants'
 
-async function startServer (): Promise<void> {
-  const app = express()
+void main()
 
-  try {
-    await loaders.init(app, api())
-    app.listen(4500, () => console.log('Server is running on port: 4500'))
-  } catch (error) {
-    console.log(error)
-  }
+async function main (): Promise<void> {
+  const db = new SequelizeAdapter()
+
+  db.connect()
+    .then(() => console.log('database connected successfully'))
+    .catch(error => console.log(error))
+
+  db.syncModels(constants.SYNC_DATABASE)
+    .then(() => console.log('synchronized database models'))
+    .catch(error => console.log(error))
+
+  const httpServer = new ExpressHttpServerAdapter(constants.SERVER_PORT)
+
+  await httpServer.start()
 }
