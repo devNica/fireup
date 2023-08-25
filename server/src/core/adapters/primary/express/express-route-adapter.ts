@@ -1,5 +1,5 @@
 import { ApplicationErrorModel } from '@core/models/errors/application-error-model'
-import { ControllerInputPort } from '@core/ports/input/controllers/controller-input-port'
+import { ControllerInputPort } from '@core/ports/input/controllers/controller-ip'
 import { Request, Response, NextFunction } from 'express'
 
 export function expressRouteAdapter<T> (controller: ControllerInputPort<T>) {
