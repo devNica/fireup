@@ -1,5 +1,5 @@
 import { ApplicationErrorModel } from '@core/models/errors/application-error-model'
-import { MiddlewareExpressInputPort } from '@core/ports/input/middlewares/middleware-input-port'
+import { MiddlewareExpressInputPort } from '@core/ports/input/middlewares/middleware-ip'
 import { NextFunction, Request, Response } from 'express'
 
 export function expressMiddlewareAdapter (middleware: MiddlewareExpressInputPort) {

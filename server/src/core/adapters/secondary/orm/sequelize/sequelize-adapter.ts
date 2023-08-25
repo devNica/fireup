@@ -1,6 +1,6 @@
 
 import sequelizeInstance from '@core/frameworks/sequelize/database-connection'
-import { DatabaseOutputPort } from '@core/ports/output/orm/db-output-port'
+import { DatabaseOutputPort } from '@core/ports/output/orm/database-op'
 import { Sequelize } from 'sequelize'
 import { BrandModel, ProductModel, ModelItemsModel, FileModel, ProductImageModel, ProductHasModelModel, ProductCategoryModel, PrototypeProductModel } from './models'
 

@@ -45,6 +45,6 @@
   "_moduleAliases": {
     "@core": "src/core",
     "@shared": "src/shared",
-    "@products": "src/products"
+    "@inventory": "src/inventory"
   }
 }

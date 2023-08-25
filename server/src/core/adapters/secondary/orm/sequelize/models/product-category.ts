@@ -15,6 +15,7 @@ export default class ProductCategoryModel extends Model<ProductCategoryEntity, P
 ProductCategoryModel.init({
   id: {
     type: DataTypes.INTEGER,
+    autoIncrement: true,
     primaryKey: true,
     allowNull: false,
     unique: true

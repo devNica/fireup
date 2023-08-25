@@ -28,7 +28,7 @@ FileModel.init({
     allowNull: false
   },
   binary: {
-    type: DataTypes.BLOB('medium'),
+    type: DataTypes.BLOB(),
     allowNull: false
   }
 }, {

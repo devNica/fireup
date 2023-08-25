@@ -41,7 +41,7 @@ ProductModel.init({
     allowNull: false
   },
   description: {
-    type: DataTypes.TEXT('medium'),
+    type: DataTypes.TEXT(),
     allowNull: false
   },
   partNumber: {

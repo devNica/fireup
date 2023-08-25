@@ -4,6 +4,7 @@ import { setupGlobalMiddlewares } from '@core/frameworks/express/setup-global-mi
 import { setupProxy } from '@core/frameworks/express/setup-proxy'
 import { setupRoutes } from '@core/frameworks/express/setup-routes'
 import { APIModel } from '@core/models/api/api-model'
+import inventoryRouter from '@inventory/routes/inventory-router'
 import express, { Application } from 'express'
 
 export class ExpressHttpServerAdapter {
@@ -20,7 +21,7 @@ export class ExpressHttpServerAdapter {
 
   private async addController (): Promise<void> {
     // const authController = await authenticationRouter(this.router)
-
+    this.controllers.push({ path: '/inventory', controller: inventoryRouter })
   }
 
   public async start (): Promise<void> {
