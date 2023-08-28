@@ -12,6 +12,7 @@ export default class PrototypeProductModel extends Model<PrototypeProductEntity,
   declare createdAt?: Date | undefined
   declare updatedAt?: Date | undefined
   declare categoryId: number
+  declare category: { categoryName: string }
 }
 
 PrototypeProductModel.init({

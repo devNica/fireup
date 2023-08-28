@@ -48,7 +48,7 @@ export class SequelizeAdapter implements DatabaseOutputPort {
       ProductHasModelModel.belongsTo(ModelItemsModel, { foreignKey: 'modelId' })
 
       // PROTOTYPE PRODUCT MODEL
-      PrototypeProductModel.belongsTo(ProductCategoryModel, { foreignKey: 'categoryId' })
+      PrototypeProductModel.belongsTo(ProductCategoryModel, { foreignKey: 'categoryId', as: 'category' })
 
       // PRODUCT CATEGORY MODEL
       ProductCategoryModel.hasMany(ProductModel, { foreignKey: 'categoryId', onDelete: 'RESTRICT', onUpdate: 'CASCADE' })

@@ -7,3 +7,12 @@ Content-Type: application/json
     "prototypeName": "Cerveza",
     "prototypeRef": "CVZ001"
 }
+
+
+### FETCH ALL PROTOTYPE PRODUCT  
+GET  http://localhost:8900/inventory/prototype-product HTTP/1.1
+Content-Type: application/json
+
+{ 
+   
+}
